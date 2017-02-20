@@ -1,0 +1,12 @@
+ php artisan key:generate
+
+ php artisan migrate
+  php artisan route:clear
+   php artisan cache:clear
+    php artisan config:cache
+     php artisan make:controller AlbumController
+      php artisan make:migration --create=albums create_albums_table
+        php artisan -help
+         php artisan make:model Model/Album
+         php artisan make:model Model/Album -m
+          php artisan migrate:rollback
