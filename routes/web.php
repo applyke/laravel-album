@@ -12,7 +12,5 @@
 */
 
 Route::get('/', function(){ return redirect('/album'); });
-Route::delete('/image/{id}',array('uses' => 'ImageController@destroy'));
-Route::resource('/album', 'AlbumController');
-Route::resource('album/{id}', 'AlbumController@show');
-Route::resource('image/{id}/', 'ImageController');
+Route::resource('album', 'AlbumController');
+Route::resource('image', 'ImageController');

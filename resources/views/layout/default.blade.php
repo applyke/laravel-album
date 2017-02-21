@@ -66,7 +66,36 @@
             margin: 10px;
             border: 1px solid #D0D0D0;
             box-shadow: 0 0 8px #D0D0D0
-        }</style>
+        }
+        .row-flex, .row-flex > div[class*='col-'] {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            flex:1 1 auto;
+        }
+        .delete{
+            position: absolute;
+            bottom: 0px;
+        }
+        .border-block{
+            border: 1px solid #ddd;
+        }
+
+        .row-flex-wrap {
+            -webkit-flex-flow: row wrap;
+            align-content: flex-start;
+            flex:0;
+        }
+        .left-block{
+            left: 40%;
+            position: relative;
+        }
+        .row-flex > div[class*='col-'] {
+            margin:-.2px; /* hack adjust for wrapping */
+        }
+    </style>
 </head>
 <body>
 <div id="container">
