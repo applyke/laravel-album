@@ -10,7 +10,7 @@
             </ul>
         </div>
     @endif
-
+   <p> Create new album.</p>
     {!! Form::open([ 'route' => 'album.store']) !!}
     <div class="form-group">
         {!! Form::label('title', 'Title:', ['class' => 'control-label']) !!}

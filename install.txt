@@ -10,3 +10,8 @@
          php artisan make:model Model/Album
          php artisan make:model Model/Album -m
           php artisan migrate:rollback
+		  
+		  php artisan db:seed
+		  
+		  vendor/bin/phpunit
+		   php artisan dusk:install

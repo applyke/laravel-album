@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Edit New Item</h2>
+                <h2>Edit  Item</h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('album.index') }}"> Back</a>
