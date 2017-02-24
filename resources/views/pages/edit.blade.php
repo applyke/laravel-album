@@ -1,4 +1,4 @@
-@extends('layout.default')
+@extends('layouts.app')
 
 @section('content')
 
@@ -24,7 +24,8 @@
         </div>
     @endif
 
-    {!! Form::model($album, ['method' => 'PATCH','route' => ['album.update', $album->id]]) !!}
+    {!! Form::model($album, ['method' => 'PATCH','route' => ['update', $album->id]]) !!}
+
     <div class="row">
 
         <div class="col-xs-12 col-sm-12 col-md-12">

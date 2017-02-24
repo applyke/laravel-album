@@ -1,4 +1,5 @@
  php artisan key:generate
+ php artisan make:auth
 
  php artisan migrate
   php artisan route:clear
@@ -15,3 +16,6 @@
 		  
 		  vendor/bin/phpunit
 		   php artisan dusk:install
+		   php artisan dusk
+
+		   php artisan make:policy PermissionPolicy

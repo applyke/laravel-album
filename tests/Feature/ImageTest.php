@@ -29,6 +29,12 @@ class ImageTest extends TestCase
 //
 //    }
 
-
+//$response = $this->call($method, $uri, $parameters, $files, $server, $content);
+    public function testRedirect()
+    {
+        $this->withoutMiddleware();
+        $response = $this->get('/');
+        $response->assertRedirect('/album');
+    }
 
 }

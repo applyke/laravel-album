@@ -1,7 +1,6 @@
-@extends('layout.default')
+@extends('layouts.app')
 @section('content')
     <div class="container-fluid">
-        <h1>Album Gallery</h1>
         <p class="lead">This is list of your albums. <a href="{{ url('/album/create') }}">Add new album</a></p>
         <hr>
         @if (Session::has('message'))
@@ -17,7 +16,7 @@
                     <div class="row text-center" style="padding-left:1em;">
                         <a href="{{ url('/album/'.$album->id) }}"
                            class="btn btn-warning pull-left button-green">Details</a>
-                        <a class="btn btn-warning pull-left" href="{{ route('album.edit',$album->id) }}">Edit</a>
+                        <a class="btn btn-warning pull-left" href="{{  url('/album/'.$album->id.'/edit') }}">Edit</a>
                         <span class="pull-left">&nbsp;</span>
                         {!! Form::open(['url'=>'/album/'.$album->id, 'class'=>'pull-left']) !!}
                         {!! Form::hidden('_method', 'DELETE') !!}

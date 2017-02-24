@@ -7,6 +7,7 @@
 Homestead.json
 Homestead.yaml
 .env
+.env.dusk.local
 composer.phar
 /storage/
 /public/images

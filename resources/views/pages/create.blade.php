@@ -1,4 +1,4 @@
-@extends('layout.default')
+@extends('layouts.app')
 
 @section('content')
     @if (count($errors) > 0)
@@ -11,7 +11,7 @@
         </div>
     @endif
    <p> Create new album.</p>
-    {!! Form::open([ 'route' => 'album.store']) !!}
+    {!! Form::open([ 'route' => 'store']) !!}
     <div class="form-group">
         {!! Form::label('title', 'Title:', ['class' => 'control-label']) !!}
         {!! Form::text('title', null, ['class' => 'form-control']) !!}

@@ -8,8 +8,15 @@ use App\Model\Album;
 
 class AlbumController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('role:admin');
+    }
+
     public function index()
     {
+        $this->middleware('permission:33');
         $albums = Album::paginate(3);
         return view('pages.index',array(
             'albums'=>  $albums
@@ -18,6 +25,7 @@ class AlbumController extends Controller
 
     public function show($id)
     {
+        $this->middleware('permission:33');
         $images = Album::find($id)->images()->get();
 
         return view('pages.details', array(

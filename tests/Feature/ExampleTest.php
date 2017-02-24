@@ -16,6 +16,7 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
+        $this->withoutMiddleware();
         $response = $this->get('/album');
 
         $response->assertStatus(200);
